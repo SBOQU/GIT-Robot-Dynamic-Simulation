@@ -34,6 +34,6 @@ graph TD
     E -->|Finite Differences| F(Velocity & Acceleration Computation)
     B & F -->|Input| G{RNEA Dynamics}
     H[Hydraulic Pump Specs] -->|Model & Add| G
-    G -->|Output| I(Actuator Torques $\tau$)
+    G -->|Output| I(Actuator Torques)
     I -->|Visualize| J(Meshcat 3D Playback)
     I -->|Analyze| K(Matplotlib Plots & Stats)
