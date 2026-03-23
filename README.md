@@ -63,7 +63,7 @@ pip install meshcat pandas numpy matplotlib scipy
 
 ## Usage
 
-1.  **Prepare your data:** Ensure your RoboDK trajectory file (e.g., `Simu_Lifting_GIT.json`) and the `GIT_CAO` folder are in the project directory.
+1.  **Prepare your data:** Ensure your RoboDK trajectory file (e.g., `P1COR0G1_Positions1.json`) and the `GIT_CAO` folder are in the project directory.
 2.  **Run the Notebook:** Launch Jupyter Notebook and open `Simulation_Dynamique_GIT.ipynb`.
 3.  **Execute:** Run all cells sequentially to process the data, start the Meshcat server, and generate torque analysis plots.
 
