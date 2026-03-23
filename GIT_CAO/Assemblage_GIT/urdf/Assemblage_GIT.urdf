@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assemblage_GIT">
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="3 0.1 0.1"
+        rpy="0 0 0" />
+      <mass
+        value="240" />
+      <inertia
+        ixx="1.6"
+        ixy="1.48029736616688E-15"
+        ixz="9.99200722162643E-16"
+        iyy="720.8"
+        iyz="1.34845838199263E-16"
+        izz="720.8" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Prismatic">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 0.165621875375608 0.8"
+        rpy="0 0 0" />
+      <mass
+        value="323.363474910333" />
+      <inertia
+        ixx="35.0152942345691"
+        ixy="-1.52718561974597E-15"
+        ixz="1.23700575899238E-15"
+        iyy="51.0334132252024"
+        iyz="3.11025874903907E-15"
+        izz="28.3652942345691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Prismatic.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Prismatic.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Prismatic"
+    type="prismatic">
+    <origin
+      xyz="2.17893779654818 0.1 0.22"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="Base" />
+    <child
+      link="Prismatic" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="1"
+      upper="5"
+      effort="1000"
+      velocity="10" />
+  </joint>
+  <link
+    name="Joint_1">
+    <inertial>
+      <origin
+        xyz="-0.201185255431564 -0.00317071339103703 -0.190957402554279"
+        rpy="0 0 0" />
+      <mass
+        value="32.0753982236863" />
+      <inertia
+        ixx="0.533880669264814"
+        ixy="-0.0122833353487527"
+        ixz="-0.425816912258502"
+        iyy="1.27893129510876"
+        iyz="-0.00724529594361739"
+        izz="0.962055785951876" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0.43 0.8"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Prismatic" />
+    <child
+      link="Joint_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="1000"
+      velocity="10" />
+  </joint>
+  <link
+    name="Joint_2">
+    <inertial>
+      <origin
+        xyz="0.000532098243666115 0.749999811247616 -0.020239837725309"
+        rpy="0 0 0" />
+      <mass
+        value="32.0921239199482" />
+      <inertia
+        ixx="8.58396152884627"
+        ixy="-0.00591112735442284"
+        ixz="3.33066907387547E-16"
+        iyy="0.252150211345469"
+        iyz="4.69999251101072E-16"
+        izz="8.81706540857474" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_2"
+    type="revolute">
+    <origin
+      xyz="-0.348511314580004 -0.114629244129573 -0.290000000000002"
+      rpy="-1.5707963267949 0 0.0132544062233252" />
+    <parent
+      link="Joint_1" />
+    <child
+      link="Joint_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="1000"
+      velocity="10" />
+  </joint>
+  <link
+    name="Joint_3">
+    <inertial>
+      <origin
+        xyz="-0.0438805311212115 -0.000163837774818765 0.164653297068235"
+        rpy="0 0 0" />
+      <mass
+        value="62.8731904782889" />
+      <inertia
+        ixx="0.864237874602816"
+        ixy="-0.00994286201552344"
+        ixz="0.0423405079213936"
+        iyy="3.5280962464749"
+        iyz="0.000155899617816418"
+        izz="3.49607881720287" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_3"
+    type="revolute">
+    <origin
+      xyz="0.001064196487343 1.49999962249532 0"
+      rpy="0 0 0" />
+    <parent
+      link="Joint_2" />
+    <child
+      link="Joint_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="1000"
+      velocity="10" />
+  </joint>
+  <link
+    name="Joint_4">
+    <inertial>
+      <origin
+        xyz="-0.000722723684908888 0.000204490611337815 0.241810541964059"
+        rpy="0 0 0" />
+      <mass
+        value="28.693465533855" />
+      <inertia
+        ixx="0.993830563429928"
+        ixy="0.0482487799006855"
+        ixz="0.00680581153923762"
+        iyy="1.15398649606944"
+        iyz="-0.00192566618581688"
+        izz="0.49051973665912" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.43999693572805 -0.00164211751305265 0.18"
+      rpy="1.5707963267949 1.29634469252949 -1.5670642328742" />
+    <parent
+      link="Joint_3" />
+    <child
+      link="Joint_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="1000"
+      velocity="10" />
+  </joint>
+  <link
+    name="Joint_5">
+    <inertial>
+      <origin
+        xyz="-0.00129445346618018 -0.000967975037125257 -0.116847256480309"
+        rpy="0 0 0" />
+      <mass
+        value="10" />
+      <inertia
+        ixx="0.083885257498887"
+        ixy="-0.00071160789352205"
+        ixz="2.39118755384304E-05"
+        iyy="0.0843047454704523"
+        iyz="1.78809815995417E-05"
+        izz="0.0681504164214365" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_5"
+    type="revolute">
+    <origin
+      xyz="-0.129895511100906 0.0367775030537148 0.570000000000001"
+      rpy="-1.57079632679495 1.56710919639746 1.29973525040208" />
+    <parent
+      link="Joint_4" />
+    <child
+      link="Joint_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="1000"
+      velocity="10" />
+  </joint>
+  <link
+    name="Joint_6">
+    <inertial>
+      <origin
+        xyz="6.67172292053708E-05 -3.34955209901899E-06 0.034738732854403"
+        rpy="0 0 0" />
+      <mass
+        value="2.40488917632299" />
+      <inertia
+        ixx="0.0101582394363205"
+        ixy="-1.0695468797245E-08"
+        ixz="-3.25087052275419E-06"
+        iyy="0.0101580269382249"
+        iyz="1.63210617208683E-07"
+        izz="0.0186372301596084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage_GIT/meshes/Joint_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_6"
+    type="revolute">
+    <origin
+      xyz="-0.0880935022420686 -0.0658751460167436 -0.114999999999997"
+      rpy="-1.5707963267949 -0.0221512243543905 2.21287939391435" />
+    <parent
+      link="Joint_5" />
+    <child
+      link="Joint_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-10"
+      upper="10"
+      effort="1000"
+      velocity="10" />
+  </joint>
+</robot>
